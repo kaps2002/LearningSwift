@@ -9,7 +9,7 @@ enum states:Int{
   case completed = 1
   
 }
-var current=states.inprogress
+var current = states.inprogress
 current = .aborted
 print(current.rawValue)
 
@@ -17,15 +17,15 @@ print(current.rawValue)
 // Example 2
 
 enum solar_system : Int , CaseIterable{
-  case Mercury=1
-  case Venus=2
-  case Earth=3
-  case Mars=4 
-  case Jupiter=5
-  case Saturn=6
-  case Uranus=7
-  case Neptune=8
-  case Pluto=9
+  case Mercury = 1
+  case Venus = 2
+  case Earth = 3
+  case Mars = 4 
+  case Jupiter = 5
+  case Saturn = 6
+  case Uranus = 7
+  case Neptune = 8
+  case Pluto = 9
 }
 
 var planet = solar_system.Venus

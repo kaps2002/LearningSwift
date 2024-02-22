@@ -41,23 +41,24 @@ var occupation = [
 occupation["Shivani"] = "Bio"
 print(occupation)
 
-let numbers = [
+let rating = [
   "Karan": 1,
   "Anirudh": 2,
   "Shivani": 4,
   "Mayank": 3,
 ]
 var largest = 0
-var name = ""
-for (i, number) in numbers {
+var top_rated = ""
+for (name, number) in rating {
   if number > largest {
     largest = number
-    name = i
+    top_rated = name
   }
 }
 print(name)
 
 //While loop
+
 var n = 2
 while n < 100 {
   n = n * 2
@@ -65,21 +66,23 @@ while n < 100 {
 print(n)
 
 //For loop
+
 var ans = 0
 for i in 0..<5 {
   print(i)
 }
 
 //Functions
-func greet(_ person: String, _ age: Int) -> String {
+
+func greet(person: String, age: Int) -> String {
   return "Hello I am \(person) and I am \(age) yrs old."
 }
-print(greet("karan", 21))
+print(greet(person:"karan", age:21))
 
 //Nested Functions
-func add(_ x:Int) -> Int{
+func add(_ x:Int) -> Int {
   var y=10
-  func addinner(_ y:Int) -> Int{
+  func addinner(_ y:Int) -> Int {
     var sum=0
     sum=x+y
     return sum
@@ -90,18 +93,20 @@ print(add(2))
 
 //Functions as arguments
 
-var numbers1 = [1,45,23,4]
+var numbers1 = [1, 45, 23, 4]
+
 print(greater(numbers1,condition))
+
 func greater (_ numbers1:[Int], _ condition:(Int) -> Bool) -> String {
-  for i in numbers1{
-    if condition(i){
+  for i in numbers1 {
+    if condition(i) { 
       return "I am greater than 30. I am \(i)"
     }
   }
   return "No one is greater than 30"
 }
-func condition(_ i:Int) -> Bool{
-  if(i>30){
+func condition(_ i:Int) -> Bool {
+  if(i>30) { 
     return true
   }
   return false

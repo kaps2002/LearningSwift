@@ -1,38 +1,42 @@
 import Foundation
 //Variables and Constants
-let x=1
-var z=x
+let x = 1
+var z = x
 z+=2
 print(z)
 
-class Person{
-  static let age=12
+class Person {
+  static let age = 12
   let lastname = "Smith"
 }
-var john=Person()
+
+var john = Person()
 print(john.lastname)
-let age=Person.age
+
+let age = Person.age
 print(age)
 
-var y="hello world"
+var y = "hello world"
 print(type(of: y))
 
-var price:Double=12.0
-var name:String="Karan"
+var price:Double = 12.0
+var name:String = "Karan"
 
 class animal{
-  let name="Dog"
+  let name = "Dog"
   let age = 7
 }
-var max:animal=animal()
+
+var max:animal = animal()
+
 
 // Basic operators
 
 // Assignment operator
-var (i,j)=(1,2)
+var (i,j) = (1,2)
 print(i,j)
-let num=10
-var n=num
+let num = 10
+var n = num
 print(n,num)
 
 // Arithmetic operator
@@ -45,14 +49,15 @@ print(35/8) //Remainder
 
 // Range Operator
 
-for i in 1...10{
-  print(5*i)
-}
-for i in 1..<6{
+for i in 1...10 {
   print(5*i)
 }
 
-//Comparison  operator
+for i in 1..<6 {
+  print(5*i)
+}
+
+//Comparison operator
 
 print(1==1)
 print(3>1)
