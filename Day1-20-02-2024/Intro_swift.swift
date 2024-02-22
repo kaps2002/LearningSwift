@@ -76,37 +76,6 @@ func greet(_ person: String, _ age: Int) -> String {
 }
 print(greet("karan", 21))
 
-func calculator(_ a:Int, _ b:Int, _ c:String) -> Any{
-    switch c{
-        case "+":
-          return a+b
-        case "-":
-          if(a>b){
-            
-            return a-b
-          }
-          
-         return b-a
-        case "*":
-          return a*b
-        case "/":
-          if(a>b){
-            return a/b
-          }
-          return b/a
-        default:
-          return "Wrong operator"
-    }
-}
-
-print (calculator(2,3,"+"))
-print (calculator(2,3,"*"))
-print (calculator(2,3,"//"))
-
-print (calculator(2,3,"+"))
-print (calculator(2,3,"*"))
-print (calculator(2,3,"/"))
-
 //Nested Functions
 func add(_ x:Int) -> Int{
   var y=10
