@@ -1,10 +1,10 @@
 let hello = "Hello world"
 
-//Multiline String
+// Multiline String
 let welcomemsg = """
-Hi I am Karan learning swift language.  
-I am doing intern in Roro Solutions.
-"""
+    Hi I am Karan learning swift language.  
+    I am doing intern in Roro Solutions.
+    """
 
 print(hello)
 print(welcomemsg)
@@ -13,16 +13,16 @@ print(welcomemsg)
 let heart = "\u{1F495}"
 print(heart)
 
-//Concatenation of string
-var sumofwords = welcomemsg+heart
+// Concatenation of string
+var sumofwords = welcomemsg + heart
 print(sumofwords)
 
-//Size of the string
+// Size of the string
 print(sumofwords.count)
 
-//Inserting and Removing
+// Inserting and Removing
 var welcome = "Hello"
-welcome.insert(contentsOf:"!",at:welcome.endIndex)
-print(welcome) //"Hello!" as output
-welcome.remove(at:welcome.index(before: welcome.endIndex))
-print(welcome) //"Hello" as output
+welcome.insert(contentsOf: "!", at: welcome.endIndex)
+print(welcome) // "Hello!" as output
+welcome.remove(at: welcome.index(before: welcome.endIndex))
+print(welcome) // "Hello" as output

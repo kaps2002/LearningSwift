@@ -2,34 +2,39 @@ import Foundation
 
 // Overriding
 
-class vehicle {
-  var currspeed: Int
-  var description: String {
-    return "Travelling at the speed of the \(currspeed)"
-  }
-  init(currspeed:Int){
-    self.currspeed=currspeed
-  }
-  func makenoise() {
-  }
+class Vehicle {
+    var currspeed: Int
+
+    var description: String {
+        return "Travelling at the speed of \(currspeed)"
+    }
+
+    init(currspeed: Int) {
+        self.currspeed = currspeed
+    }
+
+    func makenoise() {
+        // Default implementation does nothing
+    }
 }
 
-var car = vehicle(currspeed: 10)
+var car = Vehicle(currspeed: 10)
 print(car.description)
 
-class train: vehicle {
-  override func makenoise() {
-    print("Choo Choo")
-  }
+class Train: Vehicle {
+    override func makenoise() {
+        print("Choo Choo")
+    }
 }
-let rajdhani = train(currspeed: 200)
+
+let rajdhani = Train(currspeed: 200)
 rajdhani.makenoise()
 
-class bike:vehicle{
-  override func makenoise(){
-    print("vroom vroom")
-  }
+class Bike: Vehicle {
+    override func makenoise() {
+        print("vroom vroom")
+    }
 }
 
-let honda=bike(currspeed: 100)
+let honda = Bike(currspeed: 100)
 honda.makenoise()
