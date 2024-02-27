@@ -1,55 +1,38 @@
 import Foundation
 
-// Properties and Methods
+// Closures
 
-struct Person {
-    var name: String
-    var age: Int
-    var address: String
-
-    func describe() -> String {
-        return "I am \(name). I live in \(address) and \(age) yrs old"
-    }
+struct Student {
+    let name: String
+    let testScore: Int
 }
 
-var user1 = Person(name: "Karan", age: 21, address: "Delhi")
-print(user1.name, user1.address)  // Properties
-print(user1.describe()) // Methods
+let students = [
+    Student(name: "Karan", testScore: 89),
+    Student(name: "Aakash", testScore: 78),
+    Student(name: "Vaibhav", testScore: 65),
+    Student(name: "Jatin", testScore: 85),
+    Student(name: "Louis", testScore: 75),
+    Student(name: "Sunil", testScore: 62)
+]
 
-var user2 = Person(name: "Aakash", age: 23, address: "Noida")
-print(user2.name, user2.address)
-print(user2.describe())
-
-// Property Observers
-
-class CountSteps {
-    var totalSteps: Int = 0 {
-        willSet(newTotalSteps) {
-            print("About to set totalSteps to \(newTotalSteps)")
-        }
-        didSet {
-            print("\(totalSteps + oldValue) is total steps")
-        }
-    }
+var topStudentsFilter: (Student) -> Bool = { student in
+    return student.testScore >= 75
 }
 
-var steps = CountSteps()
-steps.totalSteps = 200
-steps.totalSteps = 200
+let topStudents = students.filter(topStudentsFilter)
 
-// Methods
-
-struct Cuboid {
-    var a: Int
-    var b: Int
-    var c: Int
-
-    func area() -> Int {
-        return self.a * self.b * self.c  // Uses self keyword
-    }
+for student in topStudents {
+    print(student.name)
 }
 
-var cube1 = Cuboid(a: 23, b: 23, c: 23)
-var cuboid1 = Cuboid(a: 10, b: 12, c: 14)
-print(cube1.area())
-print(cuboid1.area())
+// Example 2
+
+var compareTwoNum: (Int, Int) -> String = { num1, num2 in
+    if num1 > num2 {
+        return "\(num1) is greater"
+    } else {
+        return "\(num2) is greater"
+    }
+}
+print(compareTwoNum(2, 4))
