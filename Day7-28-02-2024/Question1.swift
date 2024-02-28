@@ -1,0 +1,1 @@
+import Foundation// Question 1let ISDN: String = "3-598-21508-8"var temp: Int = 10var sum: Int = 0for i in ISDN {    if let num = Int(String(i)) {        sum += num*temp        temp = temp - 1    }}if(sum % 11 == 0) {    print("Valid ISDN")} else {    print("Invalid ISDN")}

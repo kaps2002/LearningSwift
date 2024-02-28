@@ -1,0 +1,1 @@
+import Foundation//Question 2let num: Int = 10var sum: Int = 0for i in 1...(num/2) {    if(num%i == 0) {        sum += i    }}if(num == sum) {    print("It is perfect number")} else if(num < sum) {    print("It is abundant number")} else {    print("It is deficient number")}
