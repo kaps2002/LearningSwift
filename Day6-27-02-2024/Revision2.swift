@@ -1,6 +1,6 @@
 import Foundation
 
-// 7. Closures
+// 7. Closures -- self-contained blocks of functionality that can be passed around and used in your code.
 
 var calci: (Int, Int, String) -> String = { num1, num2, opr in
     if opr == "+" {
@@ -16,7 +16,7 @@ var calci: (Int, Int, String) -> String = { num1, num2, opr in
 print(calci(2, 3, "*"))
 print(calci(2, 3, "/"))
 
-// 8. Enumerations
+// 8. Enumerations -- it defines a common type for a group of related values and enables you to work with those values in a type-safe way within your code.
 
 enum Week: Int, CaseIterable {
     case Monday = 1
@@ -44,7 +44,7 @@ case .Monday, .Tuesday, .Wednesday, .Thursday, .Friday, .Saturday, .Sunday:
     print("Today is \(day.rawValue) day")
 }
 
-// 9. Struct & Class
+// 9. Struct & Class -- a type of data structures where we can store values and data of different types.
 
 class Student {
     let name: String
@@ -74,7 +74,7 @@ let d1 = Department(deptName: "Electronics")
 let s1 = Student(name: "Karan", age: 21, department: d1)
 s1.introduction()
 
-// 10. Inheritance
+// 10. Inheritance -- its basically the inheriting the properties and methods of one class into the other class.
 
 class Employee {
     let empId: Int
